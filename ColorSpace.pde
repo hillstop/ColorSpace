@@ -10,19 +10,19 @@ float[] hsbValue;
 color clr;
 
 void setup() {
-  size(700,450);
+  size(600,350);
   noStroke();
   sliderMap = new HashMap<String, Slider>();
   rgbValue = new float[3];
   hsbValue = new float[3];
 
   cp5 = new ControlP5(this);
-  createSlider("red", 100, 100, rgbRange[0], rgbRange[0]*5+1);
-  createSlider("green", 100, 200, rgbRange[1], rgbRange[1]*5+1);
-  createSlider("blue", 100, 300, rgbRange[2], rgbRange[2]*5+1);
-  createSlider("hue", 400, 100, hsbRange[0], hsbRange[0]*5+1);
-  createSlider("saturation", 400, 200, hsbRange[1], hsbRange[1]*5+1);
-  createSlider("brightness", 400, 300, hsbRange[2], hsbRange[2]*5+1);
+  createSlider("red", 50, 50, rgbRange[0], rgbRange[0]*5+1);
+  createSlider("green", 50, 150, rgbRange[1], rgbRange[1]*5+1);
+  createSlider("blue", 50, 250, rgbRange[2], rgbRange[2]*5+1);
+  createSlider("hue", 350, 50, hsbRange[0], hsbRange[0]*5+1);
+  createSlider("saturation", 350, 150, hsbRange[1], hsbRange[1]*5+1);
+  createSlider("brightness", 350, 250, hsbRange[2], hsbRange[2]*5+1);
 }
 
 void createSlider(String name, int posX, int posY, int rangeMax, int tickMark){
@@ -35,8 +35,8 @@ void createSlider(String name, int posX, int posY, int rangeMax, int tickMark){
                    .setNumberOfTickMarks(tickMark)
                    )
                    ;
-  cp5.getController(name).getValueLabel().setSize(10);
-  cp5.getController(name).getCaptionLabel().setSize(10);
+  cp5.getController(name).getValueLabel().setSize(15);
+  cp5.getController(name).getCaptionLabel().setSize(15);
   cp5.getController(name).getCaptionLabel().align(ControlP5.RIGHT, ControlP5.BOTTOM).setPaddingX(0);
 }
 
