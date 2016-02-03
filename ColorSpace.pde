@@ -75,7 +75,7 @@ void setColorRGB(int index, float value){
   rgbValue[index] = value;
   colorMode(RGB, rgbRange[0], rgbRange[1], rgbRange[2]);
   clr = color(rgbValue[0], rgbValue[1], rgbValue[2]);
-  println("RGB:index="+index+",value="+value);
+  
   hsbValue = RGBtoHSB(rgbValue);
 }
 
@@ -92,10 +92,9 @@ float[] RGBtoHSB(float[] rgb){
 
 void setColorHSB(int index, float value){
   hsbValue[index] = value;
-  println("rgbValue="+rgbValue[0]);
   colorMode(HSB, hsbRange[0], hsbRange[1], hsbRange[2]);
   clr = color(hsbValue[0], hsbValue[1], hsbValue[2]);
-  println("HSB:index="+index+",value="+value);
+  
   rgbValue = HSBtoRGB(hsbValue);
 }
 
